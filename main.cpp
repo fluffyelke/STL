@@ -57,6 +57,7 @@
 #include "chapters/C06StandardTemplateLibrary/FunctionObjects/FunctionObjectDefinition.h"
 #include "chapters/C06StandardTemplateLibrary/FunctionObjects/PredifinedFuncObjects/PreDefinedExamples.h"
 #include "chapters/C06StandardTemplateLibrary/FunctionObjects/Binders/C06Binders.h"
+#include "chapters/C07STLContainers/Arrays/ArrayInSTD.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -105,7 +106,7 @@ void chapter6() {
 }
 
 void chapter07() {
-    
+    C07Containers::arraysExample();
 }
 int main(int argc, char** argv) {
 
