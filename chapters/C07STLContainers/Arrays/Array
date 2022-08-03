@@ -1,0 +1,82 @@
+CONSTRUCTORS OF CLASS ARRAY
+
+Operation                       Effect
+array<Type, N> c;               -Default Constructor, creates an array with default initialized elements.
+
+array<Type, N> c(c2);           -Copy Constructor, creates a copy of another array of the same type(all elements are copied).
+
+array<Type, N> c = c2;          -Copy Constructor, creates a copy of another array of the same type(all elements are copied).
+
+array<Type, N> c(rv);           -Move Constructor, creates an array taking the contents of the rvalue rv(Since C++11).
+
+array<Type, N> c = rv;          -Move Constructor, creates an array taking the contents of the rvalue rv(Since C++11).
+
+array<Type, N> c = initlist;    -Creates an array initialized with the elements of the initializer list.
+
+
+NON-MODIFYING OPERATIONS
+
+Operation                       Effect
+c.empty()                       Returns whether the container is empty. equivalent to size() == 0, but might be faster.
+
+c.size()                        Returns the current number of elements
+
+c.max_size()                    Returns the maximum number of elements possible
+
+c1 == c2                        Returns whether c1 is equal to c2 (calls  == for the elements)
+
+c1 != c2                        Returns whether c1 is not equal to c2 (equivalent !(c1 == c2))
+
+c1 < c2                         Returns whether c1 is less than c2 
+
+c1 > c2                         Returns whether c1 is greater than c2 (equivalent to c2 < c1)
+
+c1 <= c2                        Returns whether c1 is less than or equal to c2 (equivalent to !(c2 < c1))
+
+c1 >= c2                        Returns whether c1 is greater than or equal to c2 (equivalent to !(c1 < c2))
+
+
+ASSIGNMENTS
+
+both containers have to have same type and same size
+Operation                       Effect
+c = c2                          Assign all elements of c2 to c
+
+c = rv                          Move assignment all elements of the rvalue rv to c (Since C++11)
+
+c.fill(val)                     Assign val to each elements in c
+
+c1.swap(c2)                     Swaps the data of c1 and c2     !must be of same size
+
+swap(c1, c2)                    Swaps the data of c1 and c2     !must be of same size
+
+Element Access
+
+Operation                       Effect
+c[idx]                          Returns the elements with index idx(no range checking)
+
+c.at(idx)                       Returns the elements with index idx(throws range error exception if idx is out of range)
+
+c.front()                       Returns the first element (no check whether first element exists)
+
+c.back()                        Returns the last element (no check whether last element exists)
+
+
+ITERATOR FUNCTIONS
+arrays iterators are random access iterators, thus in principle you can use all the STL algorithms
+Operation                       Effect
+c.begin()                       Returns a random access iterator for first element
+
+c.end()                         Returns a random access iterator for the position after last element
+
+c.cbegin()                      Returns a constant random access iterator for first element(Since C++11)
+
+c.cend()                        Returns a constant random access iterator for the position after last element(Since C++11)
+
+c.rbegin()                      Returns a reverse iterator for position of first element of a reverse iteration.
+
+c.rend()                        Returns a reverse iterator for the position after the last element of a reverse iteration.
+
+c.crbegin()                     Returns a constant reverse iterator for position of first element of a reverse iteration.(Since C++11)
+
+c.crend()                       Returns a constant reverse iterator for the position after the last element of a reverse iteration.(Since C++11)

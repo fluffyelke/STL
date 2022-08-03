@@ -1,0 +1,80 @@
+
+
+
+                     Requerment
+ContType c;             Yes   -Default constructor, creates and empty container without any element(std::array<> get default elements)
+
+ContType c(c2);         Yes   -Copy Constructor, creates new container as a copy of c2(all elements are copied)
+
+ContType c(c2);         Yes   -Copy Constructor, creates new container as a copy of c2(all elements are copied)
+
+ContType c(rv);         Yes   -Move Constructor, creates new container taking the contents of rvalue rv(since c++11, not for std::array<>)
+
+ContType c = rv;        Yes   -Move Constructor, creates new container taking the contents of rvalue rv(since c++11, not for std::array<>)
+
+ContType c(beg, end);    No   -Creates a container and initializes it with copies of all elements of [beg, end) (not for std::array<>)
+
+ContType c(initlist);    No   -Creates a container and initializes it with copies of the values of the initilizer list in initlist(since c++11)
+
+ContType c = initlist;   No   -Creates a container and initializes it with copies of the values of the initilizer list in initlist(since c++11)
+
+c.~ContType();          Yes   -Deletes all elements and frees the memory, if possible.
+
+c.empty()               Yes   -Returns whether container is empty. (equivalent to size == 0, but faster)
+
+c.size()                Yes   -Returns the current number of elements. not for std::forward_list<>
+
+c.max_size()            Yes   -Returns maximum number of elements possible.
+
+c1 == c2                Yes   -Returns whether c1 is equal to c2 
+
+c1 != c2                Yes   -Returns whether c1 is not equal to c2 (equivalent to !(c1 == c2))
+
+c1 < c2                  No   -Returns whether c1 is less than c2 (not for unordered containers)
+
+c1 > c2                  No   -Returns whether c1 is greater than c2 (not for unordered containers)
+
+c1 <= c2                 No   -Returns whether c1 is less than or equal to c2 ((equivalent to !(c2 < c1))not for unordered containers)
+
+c1 >= c2                 No   -Returns whether c1 is greater than or equal to c2 ((equivalent to !(c1 < c2))not for unordered containers)
+
+c = c2                  Yes   -Assign all elements of c2 to c1
+
+c = rv                  Yes   -Assign all elements of rvalue rv to c1 (Since c++11; not for std::array<>)
+
+c = initlist             No   -Assign all elements of initilizer list initlist to c1 (Since c++11; not for std::array<>)
+
+c1.swap(c2);            Yes   -Swaps the data of c1 and c2
+
+swap(c1, c2);           Yes   -Swaps the data of c1 and c2
+
+c.begin()               Yes   -Returns an iterator for the first element
+
+c.end()                 Yes   -Returns an iterator for position AFTER the last element
+
+c.cbegin()              Yes   -Returns a constant iterator for the first element(Since C++11)
+
+c.cend()                Yes   -Returns an iterator for position AFTER the last element(Since C++11)
+
+c.clear()                No   -Removes all elements (empties the container; not for std::array<>)
+
+
+
+Container Types
+size_type              Yes    -Unsigned Integral type for size values
+
+difference_type        Yes    -Signed Integral type for difference values
+
+value_type             Yes    -Type of the elements
+
+reference              Yes     -Type of the element references
+
+const_reference        Yes     -Type of the constant element references
+
+iterator               Yes     -Type of iterators
+
+const_iterator         Yes     -Type of iterators to read-only elements
+
+pointer                 No     -Type of pointers to elements(C++11)
+
+const_pointer           No     -Type of pointers to read-only elements(C++11)
