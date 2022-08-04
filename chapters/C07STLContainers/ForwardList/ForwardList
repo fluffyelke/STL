@@ -1,0 +1,137 @@
+CONSTRUCTORS OF CLASS DEQUE
+
+Operation                      Effect
+forward_list<Type> c;          -Default Constructor, creates an forward list without any elements.
+
+forward_list<Type> c(c2);      -Copy Constructor, creates a new forward list as copy of c2(all elements are copied).
+
+forward_list<Type> c = c2;     -Copy Constructor, creates a new forward list as copy of c2(all elements are copied).
+
+forward_list<Type> c(rv);      -Move Constructor, creates a new forward list taking the contents of the rvalue rv(Since C++11).
+
+forward_list<Type> c = rv;     -Move Constructor, creates a new forward list taking the contents of the rvalue rv(Since C++11).
+
+forward_list<Type> c(n);       -Creates a forward list with n elements created by default constructor.
+
+forward_list<Type> c(n, type);   -Creates a forward list initialized with n copies of Type type.
+
+forward_list<Type> c(beg, end);  -Creates a forward list initialized with the elements of the range [beg, end).
+
+forward_list<Type> c(initlist);  -Creates an forward list initialized with the elements of the initializer list initlist.
+
+forward_list<Type> c = initlist; -Creates an forward list initialized with the elements of the initializer list initlist.
+
+c.~forward_list()               -Destroys all elements and frees memory
+
+
+NON-MODIFYING OPERATIONS
+Operation                       Effect
+c.empty()                       Returns whether the container is empty. equivalent to size() == 0, but might be faster.
+
+c1 == c2                        Returns whether c1 is equal to c2 (calls  == for the elements)
+
+c1 != c2                        Returns whether c1 is not equal to c2 (equivalent !(c1 == c2))
+
+c1 < c2                         Returns whether c1 is less than c2 
+
+c1 > c2                         Returns whether c1 is greater than c2 (equivalent to c2 < c1)
+
+c1 <= c2                        Returns whether c1 is less than or equal to c2 (equivalent to !(c2 < c1))
+
+c1 >= c2                        Returns whether c1 is greater than or equal to c2 (equivalent to !(c1 < c2))
+
+
+ASSIGNMENTS
+Operation                       Effect
+c = c2                          Assign all elements of c2 to c
+
+c = rv                          Move assignment all elements of the rvalue rv to c (Since C++11)
+
+c = initlist                    Assign all elements of the initializer list initlist to c(Since C++11)
+
+c.assign(n, elem)               Assign n copies of element elem
+
+c.assign(beg, end)              Assign the elements of the range [beg, end)
+
+c.assign(initlist)              assign all elements of the initializer list initlist
+
+c1.swap(c2)                     Swaps the data of c1 and c2     
+
+swap(c1, c2)                    Swaps the data of c1 and c2    
+
+
+ELEMENT ACCESS
+Operation                       Effect
+c.front()                       Returns the first element (no check whether first element exists)
+
+ITERATOR FUNCTIONS
+vector iterators are random access iterators, thus in principle you can use all the STL algorithms
+Operation                       Effect
+c.front()                       Returns the first element
+
+c.begin()                       Returns a random access iterator for first element
+
+c.end()                         Returns a random access iterator for the position after last element
+
+c.cbegin()                      Returns a constant random access iterator for first element(Since C++11)
+
+c.cend()                        Returns a constant random access iterator for the position after last element(Since C++11)
+
+c.before_begin()                Returns a forward iterator for the position before the first element
+
+c.cbefore_begin()               Returns a const forward iterator for the position before the first element
+
+c.push_front(elem)              Inserts a copy of element at the beginning
+
+c.pop_front()                   Removes the first element(does not return it)
+
+c.insert_after(pos, elem)       Inserts a copy of elem after iterator position pos and returns the position to the new element
+
+c.insert_after(pos, n, elem)    Inserts n copies of elem after iterator position pos and returns the position of the first new element(or pos if there is no new element)
+
+c.insert_after(pos, beg, end)   Inserts a copy of all elements of the range [beg, end) after iterator position pos and returns the position of first new element(or pos if there is no new element)
+
+c.insert_after(pos, initlist)   Inserts a copy of all elements of the initializer list initlist after iterator position pos and returns the position of first new element(or pos if there is no new element)
+
+c.emplace_after(pos, args...)   Inserts a copy of an element initialized with args after iterator position pos and returns the position of first new element
+
+c.emplace_front(args...)        Inserts a copy of an element initialized with args at the beginning (returns nothing since C++11)
+
+c.erase_after(pos)              Removes the element after iterator position pos, and returns nothing.
+
+c.erase_after(beg, end)         Removes all elements in the range [beg, end) and returns nothing
+
+c.remove(val)                   Removes all elements with value val
+
+c.remove_if(op)                 Removes all elements with for which op(elem) yields true
+
+c.resize(num)                   Changes the number of elements to num (is size() grows new elements are created by default constructor )
+
+c.resize(num, elem)             Changes the number of elements to num (is size() grows new elements are copies of elem )
+
+c.clear()                       Removes all elements(empties the container)
+
+
+SPECIAL MODIFYING OPERATIONS FOR FORWARD LISTS
+op - function, operation
+c.unique()                      Removes duplicates of consecutive elements with the same value
+
+c.unique(op)                    Removes duplicates of consecutive elements, for which op() yields true 
+
+c.splice_after(pos, c2)                 Moves all elements from c2 to c, right after iterator position pos
+
+c.splice_after(pos, c2, c2pos)          Move the element at c2pos in c2 to c,  right after pos of list c.
+
+c.splice_after(pos, c2, c2beg, c2end)   Moves all elements of the range [c2beg, c2end) in c2 to c,  right after  pos of list c.
+
+c.sort()                        Sorts all elements with operator <
+
+c.sort(op)                      Sorts all elements with op()
+
+c.merge(c2)                     Assuming that both containers contain the elements sorted, moves all elements from c2 into c so that all elements are merged and still sorted 
+
+c.merge(c2, op)                 Assuming that both containers contain the elements sorted due to sorting criterion op(), moves all elements from c2 into c so that all elements are merged and still sorted according to op() 
+
+c.reverse()                     Reverse the order of all elements.
+
+ 

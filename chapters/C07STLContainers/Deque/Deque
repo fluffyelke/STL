@@ -1,0 +1,130 @@
+CONSTRUCTORS OF CLASS DEQUE
+
+Operation                      Effect
+deque<Type> c;                 -Default Constructor, creates an deque without any elements.
+
+deque<Type> c(c2);             -Copy Constructor, creates a new deque as copy of c2(all elements are copied).
+
+deque<Type> c = c2;            -Copy Constructor, creates a new deque as copy of c2(all elements are copied).
+
+deque<Type> c(rv);             -Move Constructor, creates a new deque taking the contents of the rvalue rv(Since C++11).
+
+deque<Type> c = rv;            -Move Constructor, creates a new deque taking the contents of the rvalue rv(Since C++11).
+
+deque<Type> c(n);              -Creates a deque with n elements created by default constructor.
+
+deque<Type> c(n, type);        -Creates a deque initialized with n copies of Type type.
+
+deque<Type> c(beg, end);       -Creates a deque initialized with the elements of the range [beg, end).
+
+deque<Type> c(initlist);       -Creates an deque initialized with the elements of the initializer list initlist.
+
+deque<Type> c = initlist;      -Creates an deque initialized with the elements of the initializer list initlist.
+
+c.~deque()                     -Destroys all elements and frees memory
+
+
+NON-MODIFYING OPERATIONS
+Operation                       Effect
+c.empty()                       Returns whether the container is empty. equivalent to size() == 0, but might be faster.
+
+c.size()                        Returns the current number of elements
+
+c.max_size()                    Returns the maximum number of elements possible
+
+c.shrink_to_fit()               Request to reduce capacity to fit number of elements.(Since C++11)
+
+c1 == c2                        Returns whether c1 is equal to c2 (calls  == for the elements)
+
+c1 != c2                        Returns whether c1 is not equal to c2 (equivalent !(c1 == c2))
+
+c1 < c2                         Returns whether c1 is less than c2 
+
+c1 > c2                         Returns whether c1 is greater than c2 (equivalent to c2 < c1)
+
+c1 <= c2                        Returns whether c1 is less than or equal to c2 (equivalent to !(c2 < c1))
+
+c1 >= c2                        Returns whether c1 is greater than or equal to c2 (equivalent to !(c1 < c2))
+
+
+ASSIGNMENTS
+Operation                       Effect
+c = c2                          Assign all elements of c2 to c
+
+c = rv                          Move assignment all elements of the rvalue rv to c (Since C++11)
+
+c = initlist                    Assign all elements of the initializer list initlist to c(Since C++11)
+
+c.assign(n, elem)               Assign n copies of element elem
+
+c.assign(beg, end)              Assign the elements of the range [beg, end)
+
+c.assign(initlist)              assign all elements of the initializer list initlist
+
+c1.swap(c2)                     Swaps the data of c1 and c2     
+
+swap(c1, c2)                    Swaps the data of c1 and c2    
+
+
+ELEMENT ACCESS
+Operation                       Effect
+c[idx]                          Returns the elements with index idx(no range checking)
+
+c.at(idx)                       Returns the elements with index idx(throws range error exception if idx is out of range)
+
+c.front()                       Returns the first element (no check whether first element exists)
+
+c.back()                        Returns the last element (no check whether last element exists)
+
+
+ITERATOR FUNCTIONS
+vector iterators are random access iterators, thus in principle you can use all the STL algorithms
+Operation                       Effect
+c.begin()                       Returns a random access iterator for first element
+
+c.end()                         Returns a random access iterator for the position after last element
+
+c.cbegin()                      Returns a constant random access iterator for first element(Since C++11)
+
+c.cend()                        Returns a constant random access iterator for the position after last element(Since C++11)
+
+c.rbegin()                      Returns a reverse iterator for position of first element of a reverse iteration.
+
+c.rend()                        Returns a reverse iterator for the position after the last element of a reverse iteration.
+
+c.crbegin()                     Returns a constant reverse iterator for position of first element of a reverse iteration.(Since C++11)
+
+c.crend()                       Returns a constant reverse iterator for the position after the last element of a reverse iteration.(Since C++11)
+
+c.push_back(elem)               Appends a copy of element at the end
+
+c.pop_back()                    Removes the last element(does not return it)
+
+c.push_front(elem)              Inserts a copy of element at the beginning
+
+c.pop_front()                   Removes the first element(does not return it)
+
+c.insert(pos, elem)             Inserts a copy of elem before iterator position pos and returns the position to the new element
+
+c.insert(pos, n, elem)          Inserts n copies of elem before iterator position pos and returns the position of the first new element(or pos if there is no new element)
+
+c.insert(pos, beg, end)         Inserts a copy of all elements of the range [beg, end) before iterator position pos and returns the position of first new element(or pos if there is no new element)
+
+c.insert(pos, initlist)         Inserts a copy of all elements of the initializer list initlist before iterator position pos and returns the position of first new element(or pos if there is no new element)
+
+c.emplace(pos, args...)         Inserts a copy of an element initialized with args before iterator position pos and returns the position of first new element
+
+c.emplace_back(args...)         Appends a copy of an element initialized with args at the end (returns nothing since C++11)
+
+c.emplace_front(args...)        Inserts a copy of an element initialized with args at the beginning (returns nothing since C++11)
+
+
+c.erase(pos)                    Removes the element at iterator position pos, and returns position of the next element.
+
+c.erase(beg, end)               Removes all elements in the range [beg, end) and returns the position of the next element
+
+c.resize(num)                   Changes the number of elements to num (is size() grows new elements are created by default constructor )
+
+c.resize(num, elem)             Changes the number of elements to num (is size() grows new elements are copies of elem )
+
+c.clear()                       Removes all elements(empties the container)

@@ -58,6 +58,10 @@
 #include "chapters/C06StandardTemplateLibrary/FunctionObjects/PredifinedFuncObjects/PreDefinedExamples.h"
 #include "chapters/C06StandardTemplateLibrary/FunctionObjects/Binders/C06Binders.h"
 #include "chapters/C07STLContainers/Arrays/ArrayInSTD.h"
+#include "chapters/C07STLContainers/Vectors/VectorInSTD.h"
+#include "chapters/C07STLContainers/Deque/DequeInSTD.h"
+#include "chapters/C07STLContainers/Lists/ListInSTD.h"
+#include "chapters/C07STLContainers/ForwardList/ForwardListInSTD.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -106,7 +110,12 @@ void chapter6() {
 }
 
 void chapter07() {
-    C07Containers::arraysExample();
+//    C07Containers::arraysExample();
+//    C07Containers::vectorExample();
+//    C07Containers::dequeExample();
+//    C07Containers::listsExample();
+//    C07Containers::forwardListFind();
+    C07Containers::testSpliceAfter();
 }
 int main(int argc, char** argv) {
 
