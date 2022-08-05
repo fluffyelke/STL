@@ -62,6 +62,8 @@
 #include "chapters/C07STLContainers/Deque/DequeInSTD.h"
 #include "chapters/C07STLContainers/Lists/ListInSTD.h"
 #include "chapters/C07STLContainers/ForwardList/ForwardListInSTD.h"
+#include "chapters/C07STLContainers/SetAndMultiset/SetAndMultiset.h"
+#include "chapters/C07STLContainers/MapAndMultimap/MapAndMultimap.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -115,7 +117,16 @@ void chapter07() {
 //    C07Containers::dequeExample();
 //    C07Containers::listsExample();
 //    C07Containers::forwardListFind();
-    C07Containers::testSpliceAfter();
+//    C07Containers::testSpliceAfter();
+//    C07Containers::exampleOfForwardList();
+//    C07Containers::exampleOfLowerUpperBound();
+//    C07Containers::setMultisetExample();
+//    C07Containers::testRuntimeCmp();
+//    C07Containers::mapMultimapExample();
+//    C07Containers::mapMultimapExample2();
+//    C07Containers::multimapDictionary();
+//    C07Containers::findElemInMap();
+    C07Containers::mapWithSortCriterionAtRunTimeExample();
 }
 int main(int argc, char** argv) {
 

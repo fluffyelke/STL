@@ -5,6 +5,8 @@
  */
 
 #include <forward_list>
+#include <algorithm>
+#include <iterator>
 #include "../../C06StandardTemplateLibrary/Utils/Utils.h"
 #include "ForwardListInSTD.h"
 
@@ -54,7 +56,54 @@ namespace C07Containers {
         Containers::printElements(listTwo, "list two: ");
     }
     
-    void exampleOfForwardList() {
+    
         
+    template<typename T>
+    void printForwardLists(const std::string& msg, const std::forward_list<T>& listOne, const std::forward_list<T>& listTwo) {
+        std::cout << msg << std::endl;
+        std::cout << "listOne: ";
+        std::copy(listOne.begin(), listOne.end(),
+                 std::ostream_iterator<T>(std::cout, " "));
+        
+        std::cout << std::endl;
+        std::cout << "listTwo: ";
+        std::copy(listTwo.begin(), listTwo.end(),
+                 std::ostream_iterator<T>(std::cout, " "));
+        std::cout << std::endl;
+    }
+    
+    void exampleOfForwardList() {
+        std::forward_list<int> listOne = {1, 2, 3, 4};
+        std::forward_list<int> listTwo = {97, 98, 99};
+        
+        printForwardLists("initial:", listOne, listTwo);
+        
+        //insert 6 new elements of the begining of listTwo
+        listTwo.insert_after(listTwo.before_begin(), 99);
+        listTwo.push_front(10);
+        listTwo.insert_after(listTwo.before_begin(), {10, 11, 12, 13});
+        printForwardLists("6 new elements:", listOne, listTwo);
+        
+        //insert all elements of listTwo at the begining of listOne
+        listOne.insert_after(listOne.before_begin(), 
+                            listTwo.begin(), listTwo.end());
+        printForwardLists("listTwo into listOne:", listOne, listTwo);
+        
+        //delete second element and elements after 99
+        listTwo.erase_after(listTwo.begin());
+        listTwo.erase_after(std::find(listTwo.begin(), listTwo.end(),
+                                        99),
+                            listTwo.end());
+        printForwardLists("delete 2 and after element 99: ", listOne, listTwo);
+        
+        //sort listOne assign it to listTwo and erase duplicates
+        listOne.sort();
+        listTwo = listOne;
+        listTwo.unique();
+        printForwardLists("sorted and unique: ", listOne, listTwo);
+        
+        //merge both sorted list into listOne
+        listOne.merge(listTwo);
+        printForwardLists("merged: ", listOne, listTwo);
     }
 }

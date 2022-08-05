@@ -1,0 +1,122 @@
+CONSTRUCTORS OF CLASS SET
+
+Operation                       Effect
+multiset<Type> c;               -Default Constructor, creates an set/multiset without any elements.
+
+multiset<Type> c(c2);           -Copy Constructor, creates a new set/multiset as copy of c2(all elements are copied).
+
+multiset<Type> c = c2;          -Copy Constructor, creates a new set/multiset as copy of c2(all elements are copied).
+
+multiset<Type> c(rv);           -Move Constructor, creates a new set/multiset taking the contents of the rvalue rv(Since C++11).
+
+multiset<Type> c = rv;          -Move Constructor, creates a new set/multiset taking the contents of the rvalue rv(Since C++11).
+
+multiset<Type> c(n);            -Creates a set/multiset with n elements created by default constructor.
+
+multiset<Type> c(n, type);      -Creates a set/multiset initialized with n copies of Type type.
+
+multiset<Type> c(beg, end);     -Creates a set/multiset initialized with the elements of the range [beg, end).
+
+multiset<Type> c(beg, end, op); -Creates a set/multiset initialized with the elements of the range [beg, end).
+
+multiset<Type> c(initlist);     -Creates an set/multiset initialized with the elements of the initializer list initlist.
+
+multiset<Type> c = initlist;    -Creates an set/multiset initialized with the elements of the initializer list initlist.
+
+c.~vector()                -Destroys all elements and frees memory
+
+
+
+NON-MODIFYING OPERATIONS
+Operation                       Effect
+
+c.key_comp()                    Returns the comparison criterion
+
+c.value_comp()                  Returns the comparison criterion for values as a whole (same as key_comp())
+
+c.empty()                       Returns whether the container is empty. equivalent to size() == 0, but might be faster.
+
+c.size()                        Returns the current number of elements
+
+c.max_size()                    Returns the maximum number of elements possible
+
+c1 == c2                        Returns whether c1 is equal to c2 (calls  == for the elements)
+
+c1 != c2                        Returns whether c1 is not equal to c2 (equivalent !(c1 == c2))
+
+c1 < c2                         Returns whether c1 is less than c2 
+
+c1 > c2                         Returns whether c1 is greater than c2 (equivalent to c2 < c1)
+
+c1 <= c2                        Returns whether c1 is less than or equal to c2 (equivalent to !(c2 < c1))
+
+c1 >= c2                        Returns whether c1 is greater than or equal to c2 (equivalent to !(c1 < c2))
+
+
+SPECIAL SEARCH OPERATIONS FOR SET AND MULTISET
+Operation                       Effect
+
+c.count(val)                    Returns the number of elements with value val
+
+c.find(val)                     Returns the position of the first element with value val or end() if none found
+
+c.lower_bound(val)              Returns the first position where val would get inserted  (the first element >= val)
+
+c.upper_bound(val)              Returns the last position where val would get inserted  (the first element > val)
+
+c.equal_range(val)              Returns a range with all elements with value equal to val (the first and last position where val would get inserted)
+
+
+ASSIGNMENTS
+Operation                       Effect
+c = c2                          Assign all elements of c2 to c
+
+c = rv                          Move assignment all elements of the rvalue rv to c (Since C++11)
+
+c = initlist                    Assign all elements of the initializer list initlist to c(Since C++11)
+
+c1.swap(c2)                     Swaps the data of c1 and c2     
+
+swap(c1, c2)                    Swaps the data of c1 and c2    
+
+
+ITERATOR FUNCTIONS
+Operation                       Effect
+c.begin()                       Returns a bidirectional iterator for first element
+
+c.end()                         Returns a bidirectional iterator for the position after last element
+
+c.cbegin()                      Returns a bidirectional iterator for first element(Since C++11)
+
+c.cend()                        Returns a constant bidirectional iterator for the position after last element(Since C++11)
+
+c.rbegin()                      Returns a reverse iterator for position of first element of a reverse iteration.
+
+c.rend()                        Returns a reverse iterator for the position after the last element of a reverse iteration.
+
+c.crbegin()                     Returns a constant reverse iterator for position of first element of a reverse iteration.(Since C++11)
+
+c.crend()                       Returns a constant reverse iterator for the position after the last element of a reverse iteration.(Since C++11)
+
+
+
+Operation                       Effect
+c.insert(val)                   Inserts a copy of val and returns the position of the new element and, for sets, whether succeeded
+
+c.insert(pos, val)              Inserts a copy of val and returns the position of the new element (pos is used as a hint pointing to where the insert should start the search)
+
+c.insert(beg, end)              Inserts a copy of all elements of the range [beg, end) returns nothing
+
+c.insert(initlist)              Inserts a copy of all elements of the initializer list initlist
+
+c.emplace(args...)              Inserts a copy of an element initialized with args and returns the position of the new element and, for sets, whether succeeded
+
+c.emplace_hint(pos, args...)    Inserts a copy of an element initialized with args and returns the position of the new element (pos is used as a hint pointing to where the insert should start the search)
+
+c.erase(val)                    Removes the elements equal to val, and returns number of removed elements
+
+c.erase(pos)                    Removes the element at iterator position pos, and returns the following position
+
+c.erase(beg, end)               Removes all elements in the range [beg, end) and returns the following position
+
+c.clear()                       Removes all elements(empties the container)

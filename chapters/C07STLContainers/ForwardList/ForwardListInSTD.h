@@ -61,8 +61,11 @@ namespace C07Containers {
     
     
     extern void testSpliceAfter();
+
     
     extern void exampleOfForwardList();
+    
+    
 }
 
 #endif /* FORWARDLISTINSTD_H */
