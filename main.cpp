@@ -64,6 +64,15 @@
 #include "chapters/C07STLContainers/ForwardList/ForwardListInSTD.h"
 #include "chapters/C07STLContainers/SetAndMultiset/SetAndMultiset.h"
 #include "chapters/C07STLContainers/MapAndMultimap/MapAndMultimap.h"
+#include "chapters/C07STLContainers/UnorderedContainers/UnorderedContainers.h"
+#include "chapters/C07STLContainers/UnorderedContainers/UserDefinedHashFunctionAndEquivalentCriterion.h"
+#include "chapters/C07STLContainers/UnorderedContainers/UsingLambdaAsHash.h"
+#include "chapters/C07STLContainers/CStyleArrayAsSTL/CStyleContAsSTL.h"
+#include "chapters/C07STLContainers/ReferenceSemantic/RefSemantic.h"
+#include "chapters/C09Iterators/RandomAccessIter.h"
+#include "chapters/C09Iterators/AuxiliaryIterFunctions.h"
+#include "chapters/C09Iterators/IteratorAdapters.h"
+#include "chapters/C09Iterators/InsertIterators.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -126,12 +135,37 @@ void chapter07() {
 //    C07Containers::mapMultimapExample2();
 //    C07Containers::multimapDictionary();
 //    C07Containers::findElemInMap();
-    C07Containers::mapWithSortCriterionAtRunTimeExample();
+//    C07Containers::mapWithSortCriterionAtRunTimeExample();
+//    C07Containers::exampleOfUnorderedSet();
+//    C07Containers::exampleOfUnorderedMultiset();
+//    C07Containers::testOwnHash();
+//    C07Containers::testLambdaHash();
+//    C07Containers::testBucketInterface();
+//    C07Containers::unordMultiMapHash();
+//    C07Containers::cstyleArrAsSTL();
+//    C07Containers::testRefSemantic();
 }
+
+void chapter08() {
+    
+}
+
+void chapter09() {
+//    C09Iterators::randAccessIterExample();
+//    C09Iterators::advanceExample();
+//    C09Iterators::distanceExample();
+//    C09Iterators::iterSwapExample();
+//    C09Iterators::revIterExample();
+//    C09Iterators::revIterExample2();
+//    C09Iterators::revIterExample3();
+//    C09Iterators::revIterExample4();
+    C09Iterators::backInserterTest();
+}
+
+
 int main(int argc, char** argv) {
-
-    chapter07();
-
+    
+    chapter09();
     
     return 0;
 }
