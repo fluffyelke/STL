@@ -15,6 +15,7 @@
 #define UTILS_H
 
 #include <iostream>
+#include <algorithm>
 
 
 namespace Utils {
@@ -62,6 +63,22 @@ namespace Utils {
     template<typename T, std::size_t N>
     void mySwap(T (&a)[N], T (&b)[N]) noexcept(noexcept(mySwap(*a, *b)));
     
+    
+    //correct remove_if
+    template<typename ForwIter, typename Predicate>
+    ForwIter removeIf(ForwIter beg, ForwIter end,
+                     Predicate op) {
+        while(beg != end && !op(*beg)) {        //the original remove_if is while(beg != end)
+            ++beg;
+        }
+        if(beg == end) {
+            return beg;
+        }
+        else {
+            ForwIter next = beg;
+            return std::remove_copy_if(++next, end, beg, op);
+        }
+    }
 }
 
 #endif /* UTILS_H */

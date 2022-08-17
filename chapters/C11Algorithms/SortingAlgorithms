@@ -1,0 +1,58 @@
+in
+#include <algorithm>
+
+Sorting Algorithms
+Name                         Effect
+
+sort()                       Sort all elements
+
+stable_sort()                Sorts while preserving order of equal elements
+
+partitial_sort()             Sorts until the first n elements are correct
+
+partitial_sort_copy()        Copies elements in sorted order
+
+nth_element()                Sorts according n-th position
+
+make_heap()                  Converts a range into a heap
+
+push_heap()                  Adds an element to a heap
+
+pop_heap()                   Removes an element from a heap
+
+sort_heap()                  Sorts the heap(it is no longer a heap after the call)
+
+is_sorted()                  Returns whether elements in a range are sorted
+
+is_sorted_until()            Returns first unsorted element in a range
+
+is_partitioned()             Returns whether the elements in a range are partitioned in two groups according a criterion
+
+partition_point()            Returns the partitioning element for a range partitioned into elements fulfilling and elements not fulfilling a predicate
+
+is_heap()                    Returns whether elements in a range are sorted as heap
+
+is_heap_until()              Returns first element in a range not sorted as heap
+
+partition()                  Changes the order of the elements so that elements that match a criterion are at the front
+
+stable_partition()           Same as partition() but preserves the relative order of matching and non matching elements
+
+partition_copy()             Copies the elements while changing the order so that elements that matching a criterion are at the front
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

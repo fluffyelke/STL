@@ -1,0 +1,60 @@
+in
+#include <algorithm>
+
+Non-Modifying Algorithms
+ 
+Name                        Effect         
+for_each()                  Performs an operation for each element
+
+count()                     Returns the number of elements
+
+count_if()                  Returns the number of elements that match a criterion  
+
+min_element()               Returns the element with smallest value    
+
+max_element()               Returns the element with largest value
+
+minmax_element()            Returns the element with smallest and largest value 
+
+find()                      Searches for the first element with passed value    
+
+find_if()                   Searches for the first element that matches a criterion
+
+find_if_not()               Searches for the first element that matches a criterion not
+
+search_n()                  Searches for the first n consecutive elements with certain properties
+
+find_end()                  Searches for the last occurrence of subrange
+
+find_first_of()             Searches the first of several possible elements
+
+adjacent_find()             Searches for two adjacent elements that are equal (by some criterion)
+
+equal()                     Returns whether 2 ranges are equal
+
+is_permutation()            Returns whether 2 unordered ranges contain equal elements
+
+mismatch()                  Returns the first elements of two sequence that differ
+
+lexicographical_compare()   Returns whether a range is lexicographically less than another range
+
+is_sorted()                 Returns whether the elements in a range are sorted
+
+is_sorted_until()           Returns the first unsorted element in a range
+
+is_partitioned()            Returns whether the elements in a range are partitioned in two groups according to a criterion
+
+partition_point()           Returns the partitioning element for a range partitioned into elements fulfilling and elements not fulfilling a predicate
+
+is_heap()                   Returns whether the elements in a range are sorted as a heap
+
+is_heap_until()             Returns the first element in a range not sorted as a heap
+
+all_of()                    Returns whether all elements match a criterion 
+
+all_of()                    Returns whether at least one element matches a criterion 
+
+none_of()                   Returns whether none of elements matches a criterion
+
+
+

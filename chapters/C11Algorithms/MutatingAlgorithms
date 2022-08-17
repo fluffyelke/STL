@@ -1,0 +1,27 @@
+in
+#include <algorithm>
+
+Mutating Algorithms
+Name                         Effect
+reverse()                    Reverses the order of the elements
+
+reverse_copy()               Copies the elements while reverses order
+
+rotate()                     Rotates the order of elements
+
+rotate_copy()                Copies the elements while rotating their order
+
+next_permutation()           Permutates the order of elements
+
+prev_permutation()           Permutates the order of elements
+
+shuffle()                    Brings the elements into the random order
+
+random_shuffle()             Brings the elements into the random order
+
+partition()                  Changes the order of the elements so that elements that match a criterion are at the front
+
+stable_partition()           Same as partition() but preserves the relative order of matching and non matching elements
+
+partition_copy()             Copies the elements while changing the order so that elements that matching a criterion are at the front
+

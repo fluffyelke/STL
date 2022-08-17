@@ -1,0 +1,12 @@
+in
+#include <algorithm>
+
+Sorting-Range Algorithms
+Name                         Effect
+accumulate()                 Combines all element values(processing sum, product and so forth...)
+
+inner_product()              Combines all elements of two ranges
+
+adjacent_difference()        Combines each element with its predecessor
+
+partial_sum()                Combines each element with all of his predecessors.

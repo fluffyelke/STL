@@ -17,6 +17,13 @@
 namespace C09Iterators {
     // iter/backinserter1.cpp
     extern void backInserterTest();
+    
+    // iter/frontinserter1.cpp.
+    extern void frontInserterTest();
+    
+    
+    // iter/inserter1.cpp
+    extern void inserterTest();
 }
 
 #endif /* INSERTITERATORS_H */

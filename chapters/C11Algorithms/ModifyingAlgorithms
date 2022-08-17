@@ -1,0 +1,43 @@
+in
+#include <algorithm>
+
+Modifying Algorithms
+
+Name                               Effects
+for_each()                         Performs an operation for each element
+
+copy()                             Copies a range starting with the first element
+
+copy_if()                          Copies elements that match a criterion
+
+copy_n()                           Copies n elements
+
+copy_backward()                    Copies a range starting with the last element
+
+move()                             Moves elements of a range starting with the first element
+
+move_backward()                    Moves elements of a range starting with the last element
+
+transform()                        Modifies(and copies) elements; combines elements of two ranges.
+
+merge()                            Merge two ranges
+
+swap_ranges()                      Swaps elements of 2 ranges
+
+fill()                             Replaces each element with a give value
+
+fill_n()                           Replace n elements with a given value
+
+generate()                         Replace each element with the result of an operation
+
+generate_n()                       Replaces n elements with the result of an operation
+
+iota()                             Replaces each element with a sequence of incremented values
+
+replace()                          Replaces elements that have a special value with another value
+
+replace_if()                       Replaces elements that match a criterion with another value
+
+replace_copy()                     Replaces elements that have a special value while copying the whole range
+
+replace_copy_if()                  Replaces elements that match a criterion while copying the whole range 

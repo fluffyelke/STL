@@ -1,0 +1,17 @@
+in
+#include <algorithm>
+
+Removing Algorithms
+Name                         Effect
+remove()                     Removes element with a given values
+
+remove_if()                  Removes elements that match a given criterion
+
+remove_copy()                Copies elements that do not match a given value
+
+remove_copy_if()             Copies elements that do not match a given criterion
+
+unique()                     Removes adjacent duplicates (elements that are equal to their predecessor)
+
+unique_copy()                Copies elements while removing adjacent duplicates
+

@@ -1,0 +1,28 @@
+in
+#include <algorithm>
+
+Sorting-Range Algorithms
+Name                         Effect
+binary_search()              Returns whether the range contains an element
+
+includes()                   Returns whether each element of a range is also an element of another range
+
+lower_bound()                Finds the first element greater than or equal to a given value
+
+upper_bound()                Finds the first element greater than a given value
+
+equal_range()                Returns the range of elements equal to a given value
+
+merge()                      Merges the element of two ranges
+
+set_union()                  Process the sorted union of two ranges
+
+set_intersection()           Process the sorted intersection of two ranges
+
+set_difference()             Process a sorted range that contains all elements of a range that are not part of another range
+
+set_symmetric_difference()   Process a sorted range that contains all elements that are in exactly one of two ranges.
+
+inplace_merge()              Merges two consecutive sorted ranges
+
+partition_point()            Returns the partitioning element for a range partitioned into elements fulfilling and elements not fulfilling a predicate

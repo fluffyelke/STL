@@ -15,6 +15,8 @@
 #include <iostream>
 #include <array>
 #include <vector>
+#include <algorithm>
+#include <iterator>
 
 #include "chapters/C03NewFeatures/Ch03.h"
 #include "utils/Utils.h"
@@ -73,6 +75,16 @@
 #include "chapters/C09Iterators/AuxiliaryIterFunctions.h"
 #include "chapters/C09Iterators/IteratorAdapters.h"
 #include "chapters/C09Iterators/InsertIterators.h"
+#include "chapters/C09Iterators/OstreamIterators.h"
+#include "chapters/C10FunctionObjectsAndUsingLambdas/ConceptOfFunctionObject/C10FunctionObject.h"
+#include "chapters/C10FunctionObjectsAndUsingLambdas/PredifinedFunctionObjectsAndBinders/PredifinedFunctionObjectsList.h"
+#include "chapters/C10FunctionObjectsAndUsingLambdas/PredifinedFunctionObjectsAndBinders/UserDefinedFunctionObjects.h"
+#include "chapters/C10FunctionObjectsAndUsingLambdas/UsingLambdas/LambdasAsFuncObjects.h"
+#include "chapters/C11Algorithms/for_each/ForEach.h"
+#include "chapters/C11Algorithms/NonModifying/CountAndCountIf.h"
+#include "chapters/C11Algorithms/NonModifying/MinimumAndMaximum.h"
+#include "chapters/C11Algorithms/NonModifying/SearchingElements.h"
+#include "chapters/C11Algorithms/Modifying/ModifyingAlgs.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -159,14 +171,86 @@ void chapter09() {
 //    C09Iterators::revIterExample2();
 //    C09Iterators::revIterExample3();
 //    C09Iterators::revIterExample4();
-    C09Iterators::backInserterTest();
+//    C09Iterators::backInserterTest();
+//    C09Iterators::frontInserterTest();
+//    C09Iterators::inserterTest();
+//    C09Iterators::ostreamIterTest1();
+//    C09Iterators::ostreamIterTest2();
+//    C09Iterators::istreamIterTest();
+//    C09Iterators::streamIterAndAdvance();
+//    C09Iterators::testUserDefinedIter();
+    
+    
 }
 
+void chapter10() {
+//    C10FuncObj::sequenceTest1();
+//    C10FuncObj::sequenceTest2();
+//    C10FuncObj::forEachReturnExample();
+//    C10FuncObj::predVsFuncObjTest();
+//    C10FuncObj::bindExample();
+//    C10FuncObj::testBindGlobalFunc();
+//    C10FuncObj::testCallingMemberFuncs();
+//    C10FuncObj::testFoPow();
+//    C10FuncObj::compareToSTDBind();
+//    C10FuncObj::lambdaMean();
+//    C10FuncObj::lambdaMutableUse();
+//    C10FuncObj::lambdaCallsGlobal();
+//    C10FuncObj::testPersonLambda();
+    
+}
+
+void chapter11ModifyingAlgs()  {
+//    C11Algorithms::copyExample();
+//    C11Algorithms::copyExample2();
+//    C11Algorithms::copyExample3();
+//    C11Algorithms::moveExample();
+//    C11Algorithms::transformExample();
+//    C11Algorithms::transformExample2();
+//    C11Algorithms::swapRangesExample();
+//    C11Algorithms::fillExample();
+//    C11Algorithms::generateExample();
+//    C11Algorithms::iotaExample();
+//    C11Algorithms::replaceExample();
+//    C11Algorithms::replaceExample2();
+//    C11Algorithms::removeExample();
+//    C11Algorithms::removeCopyExample();
+//    C11Algorithms::uniqueExample();
+//    C11Algorithms::uniqueCopyExample();
+    C11Algorithms::uniqueCopyExample2();
+}
+
+void chapter11() {
+//    C11Algorithms::testForEach1();
+//    C11Algorithms::testForEach2();
+//    C11Algorithms::testForEach3();
+//    C11Algorithms::testCount1();
+//    C11Algorithms::testMinMax1();
+//    C11Algorithms::exampleFind1();
+//    C11Algorithms::exampleFindIfNot();
+//    C11Algorithms::exampleSearchN1();
+//    C11Algorithms::exampleSearch1();
+//    C11Algorithms::exampleSearch2();
+//    C11Algorithms::exampleFindEnd();
+//    C11Algorithms::exampleFindFirstOf();
+//    C11Algorithms::exampleAdjacentFind();
+//    C11Algorithms::exampleEqual1();
+//    C11Algorithms::isPermutationTest();
+//    C11Algorithms::mismatchExample();
+//    C11Algorithms::LexicoGraphicalCompareTest();
+//    C11Algorithms::isSortedExample();
+//    C11Algorithms::isPartitionedExample();
+//    C11Algorithms::isHeapExample();
+//    C11Algorithms::allAnyNoneTest();
+    chapter11ModifyingAlgs();
+    
+}
 
 int main(int argc, char** argv) {
     
-    chapter09();
-    
+    chapter11();
+
+  
     return 0;
 }
 
