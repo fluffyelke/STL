@@ -85,6 +85,13 @@
 #include "chapters/C11Algorithms/NonModifying/MinimumAndMaximum.h"
 #include "chapters/C11Algorithms/NonModifying/SearchingElements.h"
 #include "chapters/C11Algorithms/Modifying/ModifyingAlgs.h"
+#include "chapters/C11Algorithms/MutatingAlgs/MutatingAlgs.h"
+#include "chapters/C11Algorithms/SortingAlgs/SortingAlgs.h"
+#include "chapters/C11Algorithms/SortedRangeAlgs/SortedRangeAlgs.h"
+#include "chapters/C11Algorithms/NumericAlgs/NumericAlgs.h"
+#include "chapters/C12SpecialContainers/Stack/Stack.h"
+#include "chapters/C12SpecialContainers/Queue/Queue.h"
+#include "chapters/C12SpecialContainers/Bitset/Bitset.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -217,9 +224,47 @@ void chapter11ModifyingAlgs()  {
 //    C11Algorithms::removeCopyExample();
 //    C11Algorithms::uniqueExample();
 //    C11Algorithms::uniqueCopyExample();
-    C11Algorithms::uniqueCopyExample2();
+//    C11Algorithms::uniqueCopyExample2();
+    
 }
 
+void chapter11MutatingAlgs() {
+//    C11Algorithms::reverseExample();
+//    C11Algorithms::rotateExample();
+//    C11Algorithms::rotateExample2();
+//    C11Algorithms::permutationExample();
+//    C11Algorithms::shuffleExample();
+//    C11Algorithms::randomShuffleExample();
+//    C11Algorithms::partitionExample();
+//    C11Algorithms::partitionCopyExample();
+}
+
+void chapter11SortedAlgs() {
+//    C11Algorithms::sortExample();
+//    C11Algorithms::sortExample2();
+//    C11Algorithms::partialSortExample();
+//    C11Algorithms::partialSortCopyExample();
+//    C11Algorithms::nthElementExample();
+//    C11Algorithms::heapExample();
+}
+
+void chapter11SortedRangeAlgs() {
+//    C11Algorithms::binarySearchExample();
+//    C11Algorithms::includesExample();
+//    C11Algorithms::boundExamples();
+//    C11Algorithms::equalRange();
+//    C11Algorithms::mergeExample();
+//    C11Algorithms::mergingExamples();
+//    C11Algorithms::inplaceMergeExample();
+}
+
+void chapter11NumericAlgs() {
+//    C11Algorithms::accumulateExample();
+//    C11Algorithms::innerProductExample();
+//    C11Algorithms::partialSumExample();
+//    C11Algorithms::adjacentDiffExample();
+//    C11Algorithms::relativeAbsExample();
+}
 void chapter11() {
 //    C11Algorithms::testForEach1();
 //    C11Algorithms::testForEach2();
@@ -242,14 +287,51 @@ void chapter11() {
 //    C11Algorithms::isPartitionedExample();
 //    C11Algorithms::isHeapExample();
 //    C11Algorithms::allAnyNoneTest();
-    chapter11ModifyingAlgs();
+    
+//    chapter11ModifyingAlgs();
+    
+//    chapter11MutatingAlgs();
+    
+//    chapter11SortedAlgs();
+    
+//    chapter11SortedRangeAlgs();
+    
+//    chapter11NumericAlgs();
     
 }
 
-int main(int argc, char** argv) {
-    
-    chapter11();
 
+
+void chapter12() {
+    auto stacks = []() {
+        C12Containers::stackExample();
+        C12Containers::testUserDefinedStack();
+    };
+    
+    auto queues = [] () -> void{
+        C12Containers::queueExample(); 
+        C12Containers::priorityQueueExample();
+    };
+     
+    auto bitsets = [] () -> void {
+//        C12Containers::bitsetExample();
+        C12Containers::bitsetExample2();
+    };
+     
+//    stacks();
+    
+//    queues();
+    
+    bitsets();
+}
+
+
+void chapter13Strings() {
+    
+}
+int main(int argc, char** argv) {
+
+    chapter13Strings();
   
     return 0;
 }
