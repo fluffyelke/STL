@@ -16,6 +16,24 @@
 
 namespace C13Strings {
     
+    // string/string1.cpp
+    extern void stringExample1(int argc, const char* argv[]);
+    
+    // string/string2.cpp
+    extern void stringExample2();
+    
+    // string/stringiter1.cpp
+    extern void stringIterExample();
+    
+    // string/stringiter2.cpp
+    extern void stringIterExample2();
+    
+    // string/stringiter3.cpp   read from standard input
+    extern void stringIterExample3();
+    
+    // string/stringIC.cpp
+    extern void stringICExample();
+    
 }
 
 #endif /* STRINGS_H */

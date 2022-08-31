@@ -92,6 +92,11 @@
 #include "chapters/C12SpecialContainers/Stack/Stack.h"
 #include "chapters/C12SpecialContainers/Queue/Queue.h"
 #include "chapters/C12SpecialContainers/Bitset/Bitset.h"
+#include "chapters/C13Strings/Strings.h"
+#include "chapters/C14RegularExpressions/Regex.h"
+#include "chapters/C15InputOutput/InputOutput.h"
+#include "chapters/C15InputOutput/Formating/Formating.h"
+#include "chapters/C15InputOutput/Files/Files.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -328,11 +333,74 @@ void chapter12() {
 
 void chapter13Strings() {
     
+    auto stringsExOne = [] () -> void {
+        const char* arr[] = {
+            "prog.dat",
+            "mydir",
+            "hello.",
+            "oops.tmp",
+            "end.dat",
+        };
+//        C13Strings::stringExample1(5, arr);
+        
+//        C13Strings::stringExample2();
+        
+//        C13Strings::stringIterExample();
+//        C13Strings::stringIterExample2();
+//        C13Strings::stringIterExample3();
+//        C13Strings::stringICExample();
+    };
+    
+    
+    stringsExOne();
 }
+
+void chapter14Regex() {
+    auto regexs = [] () -> void {
+//        C14Regex::regexExample1();
+//        C14Regex::regexExample2();
+//        C14Regex::regexExample3();
+//        C14Regex::regexIterExample1();
+//        C14Regex::regexTokenizer();
+        C14Regex::regexReplace();
+    };
+    
+    regexs();
+}
+
+void chapter15InputOutput() {
+    auto inputOutput = [] () -> void {
+//        C15IOStreams::inputOutputExample1();
+//        C15IOStreams::processAndPrintDateAndTime();
+        
+//        C15IOStreams::testProcessSum();
+    };
+ 
+    auto chapter15Formatting = [] () -> void {
+        C15Formating::adjustmentExampleRight();
+        std::cout << std::endl << std::endl;
+        C15Formating::adjustmentExampleLeft();
+    };
+    
+    auto chapter15files = [] () -> void {
+      C15Files::fstreamExample1();  
+    };
+    
+//    inputOutput();
+    
+//    chapter15Formatting();
+    
+    chapter15files();
+}
+
+void chapter16Internationalization() {
+    
+}
+
 int main(int argc, char** argv) {
 
-    chapter13Strings();
-  
+    chapter16Internationalization();
+
     return 0;
 }
 
