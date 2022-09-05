@@ -67,7 +67,7 @@ namespace C15Files {
         
         return file;
     }
-    std::ifstream openToWriteFile(const std::string& fileName) {
+    std::ifstream openToReadFile(const std::string& fileName) {
         std::ifstream file(fileName);
         if(!file.is_open()) {
             // No abort program

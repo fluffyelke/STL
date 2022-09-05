@@ -97,6 +97,9 @@
 #include "chapters/C15InputOutput/InputOutput.h"
 #include "chapters/C15InputOutput/Formating/Formating.h"
 #include "chapters/C15InputOutput/Files/Files.h"
+#include "chapters/C17Numerics/RandomNumberGeneration.h"
+#include "chapters/C17Numerics/Complex.h"
+#include "chapters/C18Concurrency/Concurrency.h"
 //#include "chapters/C05Utilities/TypeTraitsAndTypeUtilities/ClockAndTimes/Utils.h"
 
 using namespace std;
@@ -397,9 +400,34 @@ void chapter16Internationalization() {
     
 }
 
+void chapter17Numerics() {
+    auto randomNess = [] () -> void {
+//        C15RNG::randomExample();
+//        C15RNG::randomExample2();
+        C15RNG::distributionExample();
+    };
+    
+//    randomNess();
+    
+    auto complexNums = [] () -> void {
+        C17Complex::complexExample1();
+    };
+    
+    complexNums();
+}
+
+void chapter18Concurrency() {
+    auto concurrency = [] () -> void {
+//        C18Concurrency::asyncExample1();
+//        C18Concurrency::asyncExample2();
+    }; 
+    
+    concurrency();
+}
+
 int main(int argc, char** argv) {
 
-    chapter16Internationalization();
+    chapter18Concurrency();
 
     return 0;
 }
